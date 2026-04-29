@@ -18,7 +18,7 @@ const bootstrap = (app, express) => {
 
     app.use((req, res) => { // page not found // lazm tb2a a5r 7aga 
         res.status(404).json({
-            message: 'Error 404 Page Not Found'
+            message: 'Error 404 Page Not Foundd'
         });
     });
 
