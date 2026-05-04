@@ -6,7 +6,7 @@ import authRoutes from './src/routes/authRoutes.js';
 import adminRoutes from './src/routes/adminRoutes.js';
 import doctorRoutes from './src/routes/doctorRoutes.js';
 import doctorAuthRoutes from './src/routes/doctorAuthRoutes.js'; // ← add
-
+import user_router from "./src/routes/userRouter.js"
 const app = express();
 
 //db connection
@@ -41,6 +41,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/auth/doctor', doctorAuthRoutes);  // ← add
 app.use('/api/admin', adminRoutes);
 app.use('/api/doctors', doctorRoutes);
+app.use("/user" , user_router)
 
 // ─── 404 Handler
 app.use((req, res) => {
